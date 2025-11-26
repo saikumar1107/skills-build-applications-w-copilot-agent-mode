@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-a1w*+re%eb++g8k*y@vtpbpr!$mvzwyre^$q6s&wq(#iv09&e9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+
+import os
+allowed_hosts = ['localhost', '127.0.0.1']
+codespace_name = os.environ.get('CODESPACE_NAME')
+if codespace_name:
+    allowed_hosts.append(f'{codespace_name}-8000.app.github.dev')
+ALLOWED_HOSTS = allowed_hosts
 
 
 # Application definition
@@ -72,13 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'octofit_tracker.wsgi.application'
-
-        allowed_hosts = ['localhost', '127.0.0.1']
-        codespace_name = os.environ.get('CODESPACE_NAME')
-        if codespace_name:
-            allowed_hosts.append(f'{codespace_name}-8000.app.github.dev')
-        ALLOWED_HOSTS = allowed_hosts
+# ...existing code...
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
