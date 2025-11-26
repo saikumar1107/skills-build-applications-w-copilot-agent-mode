@@ -74,7 +74,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'octofit_tracker.wsgi.application'
 
-
+        allowed_hosts = ['localhost', '127.0.0.1']
+        codespace_name = os.environ.get('CODESPACE_NAME')
+        if codespace_name:
+            allowed_hosts.append(f'{codespace_name}-8000.app.github.dev')
+        ALLOWED_HOSTS = allowed_hosts
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
