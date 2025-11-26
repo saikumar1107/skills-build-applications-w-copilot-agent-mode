@@ -1,0 +1,90 @@
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f0ff 0%, #f9f9f9 100%);
+  color: #222;
+}
+
+
+.App-logo {
+  height: 48px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+
+.App-link {
+  color: #1976d2;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+}
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+.navbar-nav .nav-link.active {
+  color: #ffd600 !important;
+}
+.table {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.table thead {
+  background: #1976d2;
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e3f0ff;
+}
+.btn {
+  background: #1976d2;
+  color: #fff;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+.btn:hover {
+  background: #1565c0;
+  color: #ffd600;
+}
+.card-title {
+  color: #1976d2;
+  font-weight: bold;
+}
+.display-4 {
+  color: #1976d2;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
